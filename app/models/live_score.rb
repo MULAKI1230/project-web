@@ -1,0 +1,2 @@
+class LiveScore < ApplicationRecord
+end

@@ -28,18 +28,17 @@
           <img src="lpang.png" alt="Lapangbola Logo" class="h-[60px]">
           </a>
           <ul class="flex space-x-[50px] text-sm font-medium ml-auto">
-              <li><a href="#" class="hover:text-gray-400 transition">HOME</a></li>
+              <li><a href="/home" class="hover:text-gray-400 transition">HOME</a></li>
               <li><a href="#" class="hover:text-gray-400 transition">ABOUT</a></li>
-              <li><a href="#" class="hover:text-gray-400 transition">NEWS & ARTICLE</a></li>
+              <li><a href="/articles" class="hover:text-gray-400 transition">NEWS & ARTICLE</a></li>
               <li><a href="#" class="hover:text-gray-400 transition">#WOFH</a></li>
               <li><a href="#" class="hover:text-gray-400 transition">MATCH CENTER</a></li>
               <li><a href="#" class="hover:text-gray-400 transition">LANGUAGE</a></li>
-              <li>
-                  <a href="#" class="bg-[#FEEA01] text-black px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-yellow-400 transition">
-                      REGISTER
-                  </a>
-              </li>
           </ul>
+          <div>
+            <%= link_to "REGISTER", new_user_registration_path, class: "bg-[#FEEA01] text-black px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-yellow-400 transition" %>
+          </div>
+
       </nav>
       <%= yield %>
     </main>

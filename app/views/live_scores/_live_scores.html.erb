@@ -1,0 +1,11 @@
+
+<div class="bg-gray-100 p-4 rounded-lg shadow-md">
+  <h2 class="text-xl font-semibold text-gray-700">INFO SKOR</h2>
+  <% live_scores.each do |score| %>
+    <div class="flex justify-between items-center border-b py-2 last:border-none">
+      <span class="font-medium"><%= score.team_home %></span>
+      <span class="text-lg font-bold"><%= score.score_home %> - <%= score.score_away %></span>
+      <span class="font-medium"><%= score.team_away %></span>
+    </div>
+  <% end %>
+</div>

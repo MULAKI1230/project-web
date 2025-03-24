@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-900 text-white">
+    <div class="flex min-h-screen items-center justify-center space-x-12 p-8">
+      
+      <!-- Registrasi -->
+      <div class="w-1/2 bg-gray-800 p-12 flex flex-col justify-center rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">REGISTRASI AKUN LAPANGBOLA</h2>
+
+        <%= form_for(resource, as: resource_name, url: user_registration_path, html: { class: "space-y-4" }) do |f| %>
+          <%= f.text_field :name, placeholder: "Nama", class: "w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none" %>
+          <%= f.text_field :phone, placeholder: "Nomor Telepon", class: "w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none" %>
+          <%= f.email_field :email, placeholder: "Email", class: "w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none" %>
+          <%= f.password_field :password, placeholder: "Password", class: "w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none" %>
+          <%= f.password_field :password_confirmation, placeholder: "Konfirmasi Password", class: "w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none" %>
+          
+          <div class="flex items-center">
+            <%= f.check_box :admin_group, class: "mr-2" %>
+            <label class="text-white">Admin Group</label>
+          </div>
+
+          <%= f.submit "Daftar", class: "bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer" %>
+        <% end %>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="w-1/2">
+        <h2 class="text-lg font-bold mb-4">TESTIMONIALS:</h2>
+        <div class="space-y-4">
+          <div class="bg-white text-black p-4 rounded-lg flex items-center">
+            <img src="Ava 2.png" alt="Malik" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <strong>MALIK | ⭐⭐⭐⭐⭐</strong>
+              <p>“Turnamen kami menjadi lebih menarik.”</p>
+            </div>
+          </div>
+          <div class="bg-white text-black p-4 rounded-lg flex items-center">
+            <img src="image 10.png" alt="Juanda" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <strong>JUANDA | ⭐⭐⭐⭐☆</strong>
+              <p>“Sangat cocok untuk pembinaan usia dini.”</p>
+            </div>
+          </div>
+          <div class="bg-white text-black p-4 rounded-lg flex items-center">
+            <img src="image 11.png" alt="Hendra" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <strong>HENDRA | ⭐⭐⭐⭐⭐</strong>
+              <p>“Membantu mengorganisir jadwal.”</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="mt-6">
+          <h2 class="text-lg font-bold">FEATURES:</h2>
+          <ul class="mt-2 space-y-2">
+            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Pengelolaan Registrasi Tim</li>
+            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Aturan Tie Breaker Bisa Diatur</li>
+            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Klasemen & Bagan Otomatis</li>
+            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Pengambilan Data Statistik</li>
+            <li class="flex items-center"><span class="text-green-400 mr-2">✔</span> Dan Banyak Lagi!</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>
