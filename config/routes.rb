@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "articles/new"
   get "articles/create"
   devise_for :users
+
+  get"/about" => "about#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get '/home' => 'home#index'
   
