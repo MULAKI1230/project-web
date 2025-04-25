@@ -1,46 +1,75 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= content_for(:title) || "Project Web" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title><%= content_for(:title) || "Project Web" %></title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="mobile-web-app-capable" content="yes">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= yield :head %>
+      <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+      <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+      <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+      <link rel="icon" href="/icon.png" type="image/png">
+      <link rel="icon" href="/icon.svg" type="image/svg+xml">
+      <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+      <%# Includes all stylesheet files in app/assets/stylesheets %>
+      <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+      <%= javascript_importmap_tags %>
+    </head>
 
-  <body>
-    <nav class="bg-[#062D2D] text-white h-[80px] w-full px-10 flex items-center fixed top-0 left-0 z-10">
-      <a href="#" class="mr-auto">
-          <img src="lpang.png" alt="Lapangbola Logo" class="h-[60px]">
-          </a>
-          <ul class="flex space-x-[50px] text-sm font-medium ml-auto">
-              <li><a href="/home" class="hover:text-gray-400 transition">HOME</a></li>
-              <li><a href="#" class="hover:text-gray-400 transition">ABOUT</a></li>
-              <li><a href="/articles" class="hover:text-gray-400 transition">NEWS & ARTICLE</a></li>
-              <li><a href="#" class="hover:text-gray-400 transition">#WOFH</a></li>
-              <li><a href="#" class="hover:text-gray-400 transition">MATCH CENTER</a></li>
-              <li><a href="#" class="hover:text-gray-400 transition">LANGUAGE</a></li>
-          </ul>
-          <div>
-            <%= link_to "REGISTER", new_user_registration_path, class: "bg-[#FEEA01] text-black px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-yellow-400 transition" %>
-          </div>
-
+      <body class="flex flex-col min-h-screen">
+      
+      <nav class="bg-[#062D2D] text-white h-[80px] w-full px-10 flex items-center fixed top-0 left-0 z-10">
+        <a href="#" class="mr-auto">
+            <%= image_tag "lpang.png", alt: "Lapangbola Logo", class: "h-[60px]" %>
+            </a>
+            <ul class="flex space-x-[50px] text-sm font-medium ml-auto">
+                <li><a href="/home" class="hover:text-gray-400 transition">HOME</a></li>
+                <li><a href="#" class="hover:text-gray-400 transition">ABOUT</a></li>
+                <li><a href="/articles" class="hover:text-gray-400 transition">NEWS & ARTICLE</a></li>
+                <li><a href="#" class="hover:text-gray-400 transition">#WOFH</a></li>
+                <li><a href="#" class="hover:text-gray-400 transition">MATCH CENTER</a></li>
+                <li><a href="#" class="hover:text-gray-400 transition">LANGUAGE</a></li>
+            </ul>
+            <div>
+              <%= link_to "REGISTER", new_user_registration_path, class: "bg-[#FEEA01] text-black px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-yellow-400 transition" %>
+            </div>
       </nav>
-      <%= yield %>
-    </main>
-  </body>
-</html>
+
+      <main class="flex-grow pt-[80px]">
+        <%= yield %>
+      </main>
+
+      <footer class="w-full bg-[#062D2D] text-white py-10 px-8 mt-auto">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between">
+            <div>
+                <h2 class="text-xl font-bold">Featured Competitions</h2>
+                <ul class="text-gray-400 mt-2 text-sm">
+                    <li>Piala Gubernur Jatim 2020</li>
+                    <li>Kejuaraan International Football Championship 2019</li>
+                    <li>Sakera Muda Menpora 2019</li>
+                    <li>Liga Santri Nusantara</li>
+                    <li>Bandung Premier League U-16</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold">Pages</h2>
+                <ul class="text-gray-400 mt-2 text-sm">
+                    <li>About</li>
+                    <li>News</li>
+                    <li>Help Center</li>
+                    <li>Contact</li>
+                    <li>Pricing</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center text-gray-400 text-sm mt-6">&copy; 2020. PT. INSPIRASI TEKNOLOGI BOLASEPAK</div>
+      </footer>
+
+    </body>
+  </html>
