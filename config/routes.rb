@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get "/wofh" => "wo_fh#index"
-  resources :videos, only: [:index]
+  get "/workshop" => "workshop#index"
 
   get "live_scores/index"
   get "/articles" => "articles#index"
