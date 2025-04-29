@@ -8,6 +8,21 @@
   </head>
   <body class="bg-gray-100">
     <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+      <% @live_scores.each do |score| %>
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="bg-gray-200 px-4 py-2">
+            <h2 class="text-lg font-bold text-gray-700">INFO SKOR</h2>
+          </div>
+          <div class="p-4 grid grid-cols-3 text-center">
+            <div class="text-sm font-semibold"><%= score.team_home %></div>
+            <div class="text-xl font-bold"><%= score.score_home %> - <%= score.score_away %></div>
+            <div class="text-sm font-semibold"><%= score.team_away %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
       <h1 class="text-2xl font-bold my-4">BERITA UTAMA HARI INI</h1>
 
       <% if @articles.any? %>
@@ -18,17 +33,6 @@
           <a href="<%= article_path(@articles.first) %>" class="text-blue-500 hover:underline mt-2 block">Baca Selengkapnya</a>
         </div>
       <% end %>
-
-      <div class="bg-gray-100 p-4 rounded-lg shadow-md mb-6">
-        <h2 class="text-xl font-semibold text-gray-700">INFO SKOR</h2>
-        <% @live_scores.each do |score| %>
-          <div class="border rounded-lg p-3 mb-2 flex items-center justify-between">
-            <span class="font-medium"><%= score.team_home %></span>
-            <span class="text-lg font-bold"><%= score.score_home %> - <%= score.score_away %></span>
-            <span class="font-medium"><%= score.team_away %></span>
-          </div>
-        <% end %>
-      </div>
 
       <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-4 mt-8">
         <div class="text-xl font-bold mb-4 flex justify-between items-center">
