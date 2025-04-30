@@ -24,50 +24,71 @@
 
       <body class="flex flex-col min-h-screen">
       
-      <nav class="bg-[#062D2D] text-white h-[80px] w-full px-10 flex items-center fixed top-0 left-0 z-10">
-        <a href="#" class="mr-auto">
+      <nav class="bg-[#062D2D] text-white h-[80px] w-full px-10 flex items-center fixed top-0 left-0 right-0">
+        <a href="/home" class="mr-auto">
         <img src="LAPANGBOLA LOGO FINAL_Logo Utama Putih.png" alt="Lapangbola Logo" class="h-[60px]" />
         </a>
             <ul class="flex space-x-[50px] text-sm font-medium ml-auto">
                 <li><a href="/home" class="hover:text-gray-400 transition">HOME</a></li>
                 <li><a href="/about" class="hover:text-gray-400 transition">ABOUT</a></li>
                 <li><a href="/articles" class="hover:text-gray-400 transition">NEWS & ARTICLE</a></li>
-                <li><a href="/workshop" class="hover:text-gray-400 transition">WORKSHOP</a></li>
+                <li><a href="/workshop" class="hover:text-gray-400 transition ">WORKSHOP</a></li>
                 <li><a href="#" class="hover:text-gray-400 transition">MATCH CENTER</a></li>
                 <li><a href="#" class="hover:text-gray-400 transition">LANGUAGE</a></li>
+                 <li><%= link_to "REGISTER", new_user_registration_path, class: "bg-[#FEEA01] text-black px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-yellow-400 transition" %></li>
             </ul>
-            <div>
-              <%= link_to "REGISTER", new_user_registration_path, class: "bg-[#FEEA01] text-black px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-yellow-400 transition" %>
-            </div>
       </nav>
 
       <main class="flex-grow pt-[80px]">
         <%= yield %>
       </main>
 
-      <footer class="bg-[#062D2D] text-gray-400 py-6">
-          <div class="container mx-auto px-4">
-              <div class="flex flex-col items-center md:flex-row justify-between">
-                  <div class="flex flex-col items-center md:items-start">
-                      <img src="LAPANGBOLA LOGO FINAL_Logo Utama Putih.png" alt="Lapangbola Logo" class="h-[60px]" />
-                      <p class="mt-2 text-center md:text-left text-sm">
-                          Lapangbola.com merupakan startup yang menyediakan<br>
-                          platform statistik sepak bola di Indonesia. Platform statistik ini bersifat<br>
-                          terbuka dan dapat digunakan oleh siapapun, dimanapun, dan kapanpun,<br>
-                          mulai dari sepak bola usia dini, fun football, amatir, hingga profesional.
-                      </p>
-                  </div>
-                  
-                  <div class="mt-4 md:mt-0">
-                      <h2 class="text-xl font-bold text-center md:text-left">WORKSHOP</h2>
-                  </div>
-              </div>
-
-              <div class="text-center text-sm mt-6">
-                  <p>&copy; 2020. PT. INSPIRASI TEKNOLOGI BOLASEPAK. All Rights Reserved.</p>
-              </div>
+      <footer class="w-full bg-[#062D2D] text-white pt-10 px-8 mt-auto">
+        <!-- Top section -->
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between">
+          <div>
+            <h2 class="text-xl font-bold">Featured Competitions</h2>
+            <ul class="text-gray-400 mt-2 text-sm space-y-1">
+              <li>Piala Gubernur Jatim 2020</li>
+              <li>Kejuaraan International Football Championship 2019</li>
+              <li>Sakera Muda Menpora 2019</li>
+              <li>Liga Santri Nusantara</li>
+              <li>Bandung Premier League U-16</li>
+            </ul>
           </div>
-      </footer>
+          <div>
+            <h2 class="text-xl font-bold">Pages</h2>
+            <ul class="text-gray-400 mt-2 text-sm space-y-1">
+              <li>About</li>
+              <li>News</li>
+              <li>Help Center</li>
+              <li>Contact</li>
+              <li>Pricing</li>
+            </ul>
+          </div>
+        </div>
 
+          <!-- Bottom bar -->
+          <div class="mt-10 relative">
+            <div class="h-12 bg-no-repeat bg-right-bottom bg-contain flex items-center justify-between px-4"
+                style="background-image: url('Footers1.png');">
+              
+              <!-- Social Media Icons -->
+              <div class="flex space-x-4 text-white">
+                <a href="#"><img src="/icons/twitter.svg" alt="Twitter" class="h-5 w-5"></a>
+                <a href="#"><img src="/icons/facebook.svg" alt="Facebook" class="h-5 w-5"></a>
+                <a href="#"><img src="/icons/linkedin.svg" alt="LinkedIn" class="h-5 w-5"></a>
+                <a href="#"><img src="/icons/youtube.svg" alt="YouTube" class="h-5 w-5"></a>
+                <a href="#"><img src="/icons/instagram.svg" alt="Instagram" class="h-5 w-5"></a>
+              </div>
+
+              <!-- Copyright -->
+              <div class="text-[#062D2D] text-sm font-semibold">
+                &copy; 2020. PT. INSPIRASI TEKNOLOGI BOLASEPAK
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </body>
   </html>

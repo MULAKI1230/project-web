@@ -8,17 +8,17 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body class=<body class="flex flex-col min-h-screen w-screen overflow-x-hidden">
-        <section class="relative w-screen h-screen bg-cover bg-center" style="background-image: url('unsplash_mY2ZHBU6GRk.png');">
-            <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
-                <img src="FromOutsidetheBox.png" alt="Moto" class="w-1/2 max-1/2 object-contain">
-            </div>
-        </section>
+    <body class="flex flex-col min-h-screen w-full overflow-x-hidden">
+      <section class="w-full text-white pt-10 px-8 mt-auto min-h-screen bg-cover bg-center"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('unsplash_mY2ZHBU6GRk.png');">
+        <div class="flex items-center justify-center h-full pt-20">
+          <img src="FromOutsidetheBox.png" alt="Moto" class="w-1/2 max-w-1/2 object-contain animate-fadein">
+        </div>
+      </section>
+        <section class="w-full h-screen bg-cover bg-center" style="background-image: url('soon.jpg');">
 
-        <section class="relative w-screen h-screen bg-cover bg-center" style="background-image: url('soon.jpg');">
-
         </section>
-        <section class="w-screen bg-[#ffff] py-16 px-8">
+        <section class="w-full bg-[#ffff] py-16 px-8">
             <h2 class="text-center text-5xl font-bold">WORKSHOP</h2>
       <div class="max-w-7xl mx-auto px-4 py-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -75,36 +75,56 @@
 
         </section>
 
-    <section class="w-screen bg-[#062D2D] py-16 px-8 text-white">
-        <div class="text-center">
-            <h2 class="text-5xl font-bold">FEATURES</h2>
-            <p class="text-gray-400 mt-2">Lapangbola LMS memberikan kemudahan untuk pengelola liga dengan fitur-fitur berikut ini.</p>
-        </div>
+        <section class="w-full bg-[#062D2D] py-16 px-8 text-white">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold">FEATURES</h2>
+                <p class="text-gray-400 mt-2">Lapangbola LMS memberikan kemudahan untuk pengelola liga dengan fitur-fitur berikut ini.</p>
+            </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-10 text-center">
-            <div class="border border-gray-500 p-6 rounded-xl shadow-lg bg-[#1A1F36]">
-                <h3 class="text-xl font-bold">Team Registrations</h3>
-                <p class="text-gray-400 text-sm mt-2">Pendaftaran tim peserta liga dapat dilakukan langsung melalui platform Lapangbola.</p>
-                <a href="#" class="mt-4 text-yellow-400 font-semibold block">Learn More</a>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-3xl mx-auto mt-10 text-center">
+                <div class="flex items-center border border-gray-500 p-6 rounded-xl shadow-lg bg-[#1A1F36]">
+                  <div class="flex-shrink-0">
+                    <img src="paper icon.png" alt="Paper Icon" class="w-24 h-24 object-contain">
+                  </div>
+                  <div class="pl-6">
+                    <h3 class="text-xl font-bold">Team Registrations</h3>
+                    <p class="text-gray-400 text-sm mt-2 text-justify">Pendaftaran tim peserta liga dapat dilakukan langsung melalui platform Lapangbola.</p>
+                    <a href="#" class="mt-4 text-yellow-400 font-semibold inline-block">Learn More</a>
+                  </div>
+                </div>
+                <div class="flex items-center border border-gray-500 p-6 rounded-xl shadow-lg bg-[#1A1F36]">
+                  <div class="flex-shrink-0">
+                    <img src="score.png" alt="score icon" class="w-24 h-24 object-contain">
+                  </div>
+                  <div class="pl-6">
+                    <h3 class="text-xl font-bold">Livescore</h3>
+                    <p class="text-gray-400 text-sm mt-2 text-justify">Pertandingan dapat diikuti dari manapun.</p>
+                    <a href="#" class="mt-4 text-yellow-400 font-semibold inline-block">Learn More</a>
+                  </div>
+                </div>
+                <div class="flex items-center border border-gray-500 p-6 rounded-xl shadow-lg bg-[#1A1F36]">
+                  <div class="flex-shrink-0">
+                    <img src="graph 1.png" alt="graph1 icon" class="w-24 h-24 object-contain">
+                  </div>
+                  <div class="pl-6">
+                    <h3 class="text-xl font-bold">Team Statistics</h3>
+                    <p class="text-gray-400 text-sm mt-2 text-justify">Performa setiap tim dicatat dan dapat menjadi bahan evaluasi serta menentukan strategi tim ke depan.</p>
+                    <a href="#" class="mt-4 text-yellow-400 font-semibold block">Learn More</a>
+                  </div>
+                </div>
+                <div class="flex items-center border border-gray-500 p-6 rounded-xl shadow-lg bg-[#1A1F36]">
+                  <div class="flex-shrink-0">
+                    <img src="graph 2.png" alt="graph2 icon" class="w-24 h-24 object-contain">
+                  </div>
+                  <div class="pl-6">
+                    <h3 class="text-xl font-bold">Player Statistics</h3>
+                    <p class="text-gray-400 text-sm mt-2 text-justify">Pemain dapat melihat performa mereka selama pertandingan.</p>
+                    <a href="#" class="mt-4 text-yellow-400 font-semibold block">Learn More</a>
+                  </div>
+                </div>
             </div>
-            <div class="border border-gray-500 p-6 rounded-xl shadow-lg bg-[#1A1F36]">
-                <h3 class="text-xl font-bold">Livescore</h3>
-                <p class="text-gray-400 text-sm mt-2">Pertandingan dapat diikuti dari manapun.</p>
-                <a href="#" class="mt-4 text-yellow-400 font-semibold block">Learn More</a>
-            </div>
-            <div class="border border-gray-500 p-6 rounded-xl shadow-lg bg-[#1A1F36]">
-                <h3 class="text-xl font-bold">Team Statistics</h3>
-                <p class="text-gray-400 text-sm mt-2">Performa setiap tim dicatat dan dapat menjadi bahan evaluasi serta menentukan strategi tim ke depan.</p>
-                <a href="#" class="mt-4 text-yellow-400 font-semibold block">Learn More</a>
-            </div>
-            <div class="border border-gray-500 p-6 rounded-xl shadow-lg bg-[#1A1F36]">
-                <h3 class="text-xl font-bold">Player Statistics</h3>
-                <p class="text-gray-400 text-sm mt-2">Pemain dapat melihat performa mereka selama pertandingan.</p>
-                <a href="#" class="mt-4 text-yellow-400 font-semibold block">Learn More</a>
-            </div>
-        </div>
-    </section>
-            <section class="w-screen bg-white py-16 px-8">
+        </section>
+            <section class="w-full bg-white py-16 px-8">
         <div class="text-center">
             <h2 class="text-5xl font-bold text-black">OUR CLIENTS & PARTNERS</h2>
         </div>

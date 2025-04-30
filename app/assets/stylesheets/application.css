@@ -2,3 +2,14 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@font-face {
+    font-family: 'MADE Tommy';
+    src: url('/assets/MADE TOMMY Regular_PERSONAL USE.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MADE Tommy', sans-serif;
+}
