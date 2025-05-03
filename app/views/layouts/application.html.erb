@@ -1,7 +1,7 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html>
     <head>
-      <title><%= content_for(:title) || "Project Web" %></title>
+      <title><%= content_for(:title) || "Lapangbola" %></title>
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="mobile-web-app-capable" content="yes">
@@ -23,7 +23,6 @@
     </head>
 
       <body class="flex flex-col min-h-screen">
-      
       <nav class="bg-[#062D2D] text-white h-[80px] w-full px-10 flex items-center fixed top-0 left-0 right-0">
         <a href="/home" class="mr-auto">
         <img src="LAPANGBOLA LOGO FINAL_Logo Utama Putih.png" alt="Lapangbola Logo" class="h-[60px]" />
@@ -44,14 +43,14 @@
       </main>
 
       <footer class="w-full bg-[#062D2D] text-white pt-10 px-8 mt-auto">
-        <!-- Top section -->
         <div class="max-w-6xl mx-auto flex flex-wrap justify-between">
           <div>
             <h2 class="text-xl font-bold">Featured Competitions</h2>
             <ul class="text-gray-400 mt-2 text-sm space-y-1">
               <li>Piala Gubernur Jatim 2020</li>
-              <li>Kejuaraan International Football Championship 2019</li>
-              <li>Sakera Muda Menpora 2019</li>
+              <li>Kemenpora International Football Championship 2019</li>
+              <li>Super Muda Menpora 2019</li>
+              <li>Liga Lapangbola</li>
               <li>Liga Santri Nusantara</li>
               <li>Bandung Premier League U-16</li>
             </ul>
@@ -59,33 +58,33 @@
           <div>
             <h2 class="text-xl font-bold">Pages</h2>
             <ul class="text-gray-400 mt-2 text-sm space-y-1">
-              <li>About</li>
-              <li>News</li>
-              <li>Help Center</li>
-              <li>Contact</li>
-              <li>Pricing</li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/article">News</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Pricing</a></li>
             </ul>
           </div>
         </div>
 
-          <!-- Bottom bar -->
-          <div class="mt-10 relative">
-            <div class="h-12 bg-no-repeat bg-right-bottom bg-contain flex items-center justify-between px-4"
-                style="background-image: url('Footers1.png');">
-              
-              <!-- Social Media Icons -->
-              <div class="flex space-x-4 text-white">
-                <a href="#"><img src="/icons/twitter.svg" alt="Twitter" class="h-5 w-5"></a>
-                <a href="#"><img src="/icons/facebook.svg" alt="Facebook" class="h-5 w-5"></a>
-                <a href="#"><img src="/icons/linkedin.svg" alt="LinkedIn" class="h-5 w-5"></a>
-                <a href="#"><img src="/icons/youtube.svg" alt="YouTube" class="h-5 w-5"></a>
-                <a href="#"><img src="/icons/instagram.svg" alt="Instagram" class="h-5 w-5"></a>
-              </div>
+        <div class="mt-10 relative w-full">
+          <!-- Diagonal putih -->
+          <div class="absolute right-[260px] top-0 h-full w-6 bg-white transform skew-x-12 z-0"></div>
 
-              <!-- Copyright -->
-              <div class="text-[#062D2D] text-sm font-semibold">
-                &copy; 2020. PT. INSPIRASI TEKNOLOGI BOLASEPAK
-              </div>
+          <div class="flex items-center justify-between px-8 h-12 bg-[#062D2D] relative z-10">
+            <!-- Ikon sosial media -->
+            <div class="flex space-x-4">
+              <a href="#"><img src="twitter.png" alt="Twitter" class="h-4 w-4"></a>
+              <a href="#"><img src="facebook.png" alt="Facebook" class="h-4 w-4"></a>
+              <a href="#"><img src="linkedin.png" alt="LinkedIn" class="h-4 w-4"></a>
+              <a href="#"><img src="youtube.png" alt="YouTube" class="h-4 w-4"></a>
+              <a href="#"><img src="instagram.png" alt="Instagram" class="h-4 w-4"></a>
+            </div>
+
+            <!-- Copyright (nempel kanan) -->
+            <div class="bg-white text-[#002c2c] text-sm font-bold px-4 py-1 rounded-l-full ml-auto">
+              &copy; 2020. PT. INSPIRASI TEKNOLOGI BOLASEPAK
             </div>
           </div>
         </div>
