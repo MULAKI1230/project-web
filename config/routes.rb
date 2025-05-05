@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "/workshop" => "workshop#index"
+
   get "live_scores/index"
   get "/articles" => "articles#index"
   resources :live_scores, only: [:index]
@@ -6,6 +8,9 @@ Rails.application.routes.draw do
   get "articles/new"
   get "articles/create"
   devise_for :users
+
+  post "/newsletter_subscribe", to: "newsletter#subscribe"
+
 
   get"/about" => "about#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

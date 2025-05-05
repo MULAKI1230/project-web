@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>WoFH</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-cover bg-center h-[300px] relative" style="background-image: url('background.png');">
+      <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white px-4">
+        <h1 class="text-4xl font-bold">#WoFH</h1>
+        <p class="text-lg mt-2">Workout From Home,<br> Mari tetap berolahraga dari rumah.</p>
+        
+        <div class="flex mt-6 gap-2 flex-col sm:flex-row items-center w-full sm:w-auto">
+          <input type="text" placeholder="CARI VIDEO LATIHAN" class="px-4 py-2 rounded-full w-full sm:w-64 focus:outline-none ">
+          <select class="px-4 py-2 rounded-full w-full sm:w-48 text-black">
+            <option>KATEGORI</option>
+            <option>Dribbling</option>
+            <option>Highlight</option>
+            <option>Striker Drills</option>
+            <option>Cardio</option>
+          </select>
+          <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-500">Cari</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto mt-10 px-4">
+      <div class="grid grid-cols-5 font-semibold border-b border-blue-500 pb-2 mb-4 text-sm md:text-base">
+        <div class="col-span-4">VIDEO</div>
+        <div class="text-right">KATEGORI</div>
+      </div>
+
+      <% @videos.each do |video| %>
+        <div class="grid grid-cols-5 gap-4 mb-6 border-b border-gray-300 pb-4">
+          <div class="col-span-4 flex gap-4">
+            <img src="<%= video.thumbnail_url %>" alt="Thumbnail" class="w-40 h-auto rounded-md shadow">
+            <div class="flex flex-col">
+              <h2 class="font-bold text-md md:text-lg"><%= video.title %></h2>
+              <p class="text-gray-700 text-sm mt-1 line-clamp-3"><%= video.description %></p>
+              <p class="text-sm text-gray-500 mt-2"><%= video.created_at.strftime("%d %B %Y") %></p>
+            </div>
+          </div>
+
+          <div class="text-right flex items-start justify-end font-bold text-sm md:text-base text-blue-900">
+            <%= video.category %>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="text-center mt-10">
+        <%= link_to "Muat Lebih Banyak", videos_path(page: params[:page].to_i + 1), class: "bg-white border border-gray-400 px-6 py-2 rounded-full text-gray-800 hover:bg-gray-100" %>
+      </div>
+    </div>
+  </body>
+</html> 

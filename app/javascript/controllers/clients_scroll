@@ -1,0 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollContainer = document.getElementById("clientsScroll");
+    if (!scrollContainer) return;
+  
+    const scrollLeftBtn = document.querySelector(".scroll-left");
+    const scrollRightBtn = document.querySelector(".scroll-right");
+  
+    const scrollAmount = 300;
+  
+    scrollLeftBtn.addEventListener("click", () => {
+      scrollContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+  
+    scrollRightBtn.addEventListener("click", () => {
+      scrollContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+  });

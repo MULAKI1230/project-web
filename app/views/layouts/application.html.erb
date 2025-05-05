@@ -1,46 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= content_for(:title) || "Project Web" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <html>
+    <head>
+      <title><%= content_for(:title) || "Lapangbola" %></title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="mobile-web-app-capable" content="yes">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= yield :head %>
+      <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+      <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+      <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+      <link rel="icon" href="/icon.png" type="image/png">
+      <link rel="icon" href="/icon.svg" type="image/svg+xml">
+      <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+      <%# Includes all stylesheet files in app/assets/stylesheets %>
+      <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+      <%= javascript_importmap_tags %>
+    </head>
 
-  <body>
-    <nav class="bg-[#062D2D] text-white h-[80px] w-full px-10 flex items-center fixed top-0 left-0 z-10">
-      <a href="#" class="mr-auto">
-          <img src="lpang.png" alt="Lapangbola Logo" class="h-[60px]">
-          </a>
-          <ul class="flex space-x-[50px] text-sm font-medium ml-auto">
-              <li><a href="/home" class="hover:text-gray-400 transition">HOME</a></li>
-              <li><a href="#" class="hover:text-gray-400 transition">ABOUT</a></li>
-              <li><a href="/articles" class="hover:text-gray-400 transition">NEWS & ARTICLE</a></li>
-              <li><a href="#" class="hover:text-gray-400 transition">#WOFH</a></li>
-              <li><a href="#" class="hover:text-gray-400 transition">MATCH CENTER</a></li>
-              <li><a href="#" class="hover:text-gray-400 transition">LANGUAGE</a></li>
-          </ul>
-          <div>
-            <%= link_to "REGISTER", new_user_registration_path, class: "bg-[#FEEA01] text-black px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-yellow-400 transition" %>
-          </div>
-
+      <body class="flex flex-col min-h-screen w-full">
+      <nav class="bg-[#062D2D] text-white h-[80px] w-full px-10 flex items-center fixed top-0 left-0 right-0">
+        <a href="/home" class="mr-auto">
+        <img src="LAPANGBOLA LOGO FINAL_Logo Utama Putih.png" alt="Lapangbola Logo" class="h-[60px]" />
+        </a>
+            <ul class="flex space-x-[50px] text-sm font-medium ml-auto">
+                <li><a href="/home" class="hover:text-gray-400 transition">HOME</a></li>
+                <li><a href="/about" class="hover:text-gray-400 transition">ABOUT</a></li>
+                <li><a href="/articles" class="hover:text-gray-400 transition">NEWS & ARTICLE</a></li>
+                <li><a href="/workshop" class="hover:text-gray-400 transition ">WORKSHOP</a></li>
+                <li><a href="#" class="hover:text-gray-400 transition">MATCH CENTER</a></li>
+                <li><a href="#" class="hover:text-gray-400 transition">LANGUAGE</a></li>
+                 <li><%= link_to "REGISTER", new_user_registration_path, class: "bg-[#FEEA01] text-black px-5 py-2 rounded-lg font-semibold shadow-md hover:bg-yellow-400 transition" %></li>
+            </ul>
       </nav>
-      <%= yield %>
-    </main>
-  </body>
-</html>
+
+      <main class="flex-grow pt-[80px]">
+        <%= yield %>
+      </main>
+
+      <footer class="w-full bg-[#062D2D] text-white pt-10 px-8 mt-auto">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between">
+          <div>
+            <h2 class="text-xl font-bold">Featured Competitions</h2>
+            <ul class="text-gray-400 mt-2 text-sm space-y-1">
+              <li>Piala Gubernur Jatim 2020</li>
+              <li>Kemenpora International Football Championship 2019</li>
+              <li>Super Muda Menpora 2019</li>
+              <li>Liga Lapangbola</li>
+              <li>Liga Santri Nusantara</li>
+              <li>Bandung Premier League U-16</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold">Pages</h2>
+            <ul class="text-gray-400 mt-2 text-sm space-y-1">
+              <li><a href="/about">About</a></li>
+              <li><a href="/article">News</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-10 relative w-full">
+          <!-- Diagonal putih -->
+          <div class="absolute right-[260px] top-0 h-full w-6 bg-white transform skew-x-12 z-0"></div>
+
+          <div class="flex items-center justify-between px-8 h-12 bg-[#062D2D] relative z-10">
+            <!-- Ikon sosial media -->
+            <div class="flex space-x-4">
+              <a href="#"><img src="twitter.png" alt="Twitter" class="h-4 w-4"></a>
+              <a href="#"><img src="facebook.png" alt="Facebook" class="h-4 w-4"></a>
+              <a href="#"><img src="linkedin.png" alt="LinkedIn" class="h-4 w-4"></a>
+              <a href="#"><img src="youtube.png" alt="YouTube" class="h-4 w-4"></a>
+              <a href="#"><img src="instagram.png" alt="Instagram" class="h-4 w-4"></a>
+            </div>
+
+            <!-- Copyright (nempel kanan) -->
+            <div class="bg-white text-[#002c2c] text-sm font-bold px-4 py-1 rounded-l-full ">
+              &copy; 2020. PT. INSPIRASI TEKNOLOGI BOLASEPAK
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+  </html>
