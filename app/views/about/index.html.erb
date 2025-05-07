@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -6,63 +6,84 @@
         <title>Document</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    <body class="w-full">
         <section class="bg-[#062D2D] text-white w-screen">
-        <div class="relative w-full h-[400px]">
-            <img src="unsplash_-3pxa1O1zoI.png" alt="Football" class="w-full h-full object-cover">
-            <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-10 bg-black bg-opacity-50 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">WE LOVE FOOTBALL</h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto">
-                    Legendsports.id is a startup that aims to improve amateur football in Indonesia, providing centralized data for grassroots and early-stage football.
-                </p>
+            <div class="relative w-full h-max-screen">
+                <img src="unsplash_-3pxa1O1zoI.png" alt="Football" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#062D2D]">
+                </div>
+                <div class="absolute top-0 left-1/2 w-1/2 h-full flex flex-col items-center justify-center px-20 text-center">
+                    <h1 class="text-8xl font-bold mb-4">WE LOVE FOOTBALL</h1>
+                    <p class="text-lg md:text-xl max-w-2xl ml-auto">
+                        Legendsports.id is a startup that aims to improve amateur football in Indonesia, providing centralized data for grassroots and early-stage football.
+                    </p>
+                </div>
             </div>
-        </div>
         </section>
 
-        <section class="bg-white text-black py-20">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <h2 class="text-3xl font-extrabold mb-6">WHAT WE’RE ABOUT</h2>
-                <img src="unsplash_TPF963E7G88.png" alt="About Us" class="mx-auto mb-6 rounded-lg shadow-lg max-h-[300px]">
-                <p class="text-lg">A startup that aims to leverage amateur football.</p>
+        <!-- filepath: /Users/fmaulana/Documents/DATA/LapangBola/project-web/app/views/about/index.html.erb -->
+        <section class="bg-white text-black">
+            <div class="flex flex-wrap mx-auto px-6 text-center py-20 relative">
+                <div class="flex w-full relative justify-end">
+                    <div class="flex justify-end items-end w-auto pr-40 relative">
+                        <img src="unsplash_TPF963E7G88.png" alt="About Us" class="rounded-lg shadow-lg h-[60vh]">
+                        <div class="absolute inset-0 flex items-end justify-center pr-[20vh]">
+                            <p class="text-lg text-center px-4 py-2 rounded-lg">
+                                A startup that aims to leverage amateur football.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-1/2 absolute inset-0 justify-center items-center">
+                    <h2 class="text-8xl font-[1000] leading-2 px-[10vh] text-center text-[#062D2D]">WHAT WE’RE ABOUT</h2>
+                </div>
             </div>
         </section>
-        <section class="bg-[#062D2D] text-white py-20">
+        
+        <section class="bg-[#062D2D] text-white py-5">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl font-extrabold text-center mb-10">OUR TEAM</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-            <div>
-                <img src="Ellipse 81.png" alt="Prabu" class="w-28 h-28 rounded-full mx-auto mb-4">
-                <h3 class="font-semibold text-lg">PRABU RIANSYAH S</h3>
-                <p class="text-sm">Co-FOUNDER / COO</p>
-                <div class="mt-2 flex justify-center space-x-3 text-sm">
-                    <a href="#"></a>
-                    <a href="#"></a>
-                </div>
-        </div>
-        <div>
-                <img src="Ellipse 80.png" alt="Odit" class="w-28 h-28 rounded-full mx-auto mb-4">
-                <h3 class="font-semibold text-lg">ODIT EKWARDO</h3>
-                <p class="text-sm">CTO</p>
-                <div class="mt-2 flex justify-center space-x-3 text-sm">
-                    <a href="#"></a>
-                    <a href="#"></a>
-                </div>
-            </div>
-            <div>
-                <img src="Ellipse 82.png" alt="Ali" class="w-28 h-28 rounded-full mx-auto mb-4">
-                <h3 class="font-semibold text-lg">ALI BAGUS A. S.</h3>
-                <p class="text-sm">COO</p>
-                <div class="mt-2 flex justify-center space-x-3 text-sm">
-                    <a href="#"></a>
-                    <a href="#"></a>
+                <h2 class="text-5xl font-extrabold leading-2 text-center py-6 ">OUR TEAM</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 text-center py-5">
+                    <div>
+                        <img src="Ellipse 81.png" alt="Prabu" class="w-2/3 h-auto rounded-full mx-auto mb-4">
+                        <h3 class="font-semibold text-lg">PRABU RIANSYAH S</h3>
+                        <p class="text-sm">Co-Founder / COO</p>
+                        <div class="mt-2 flex justify-center space-x-3 text-sm">
+                            <a href="#"><img src="twitter.png" alt="Twitter" class="h-4 w-4"></a>
+                            <a href="#"><img src="linkedin.png" alt="LinkedIn" class="h-4 w-4"></a>
+                            <a href="#"><img src="instagram.png" alt="Instagram" class="h-4 w-4"></a>
+                        </div>
+                    </div>
+                
+                    <div>
+                        <img src="Ellipse 80.png" alt="Odit" class="w-2/3 h-auto rounded-full mx-auto mb-4">
+                        <h3 class="font-semibold text-lg">ODIT EKWARDO</h3>
+                        <p class="text-sm">CTO</p>
+                        <div class="mt-2 flex justify-center space-x-3 text-sm">
+                            <a href="#"><img src="twitter.png" alt="Twitter" class="h-4 w-4"></a>
+                            <a href="#"><img src="linkedin.png" alt="LinkedIn" class="h-4 w-4"></a>
+                            <a href="#"><img src="instagram.png" alt="Instagram" class="h-4 w-4"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="Ellipse 82.png" alt="Ali" class="w-2/3 h-auto rounded-full mx-auto mb-4">
+                        <h3 class="font-semibold text-lg">ALI BAGUS A. S.</h3>
+                        <p class="text-sm">Co-Founder / CMO</p>
+                        <div class="mt-2 flex justify-center space-x-3 text-sm">
+                            <a href="#"><img src="twitter.png" alt="Twitter" class="h-4 w-4"></a>
+                            <a href="#"><img src="linkedin.png" alt="LinkedIn" class="h-4 w-4"></a>
+                            <a href="#"><img src="instagram.png" alt="Instagram" class="h-4 w-4"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
         <section class="bg-white text-black py-20 text-center">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">YOU’RE IN A<br><span class="text-4xl md:text-5xl font-extrabold">GOOD COMPANY</span></h2>
-            <p class="text-lg text-gray-700 mb-10">
-            Do you have the skills and are interested in developing your abilities by becoming a part of our company?
+            <h2 class="text-8xl font-extrabold leading-2 text-center text-[#062D2D]">YOU’RE IN A<br>GOOD COMPANY</h2>
+            <p class="text-lg text-gray-700 mb-10 py-10">
+            Do you have the skills and are interested in developing<br>your abilities by becoming a part of our company?
             </p>
             <button class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition duration-300">
             SUBMIT YOUR RESUME

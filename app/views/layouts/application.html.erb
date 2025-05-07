@@ -22,8 +22,8 @@
       <%= javascript_importmap_tags %>
     </head>
 
-      <body class="flex flex-col min-h-screen w-full">
-      <nav class="bg-[#062D2D] text-white h-[80px] w-full px-10 flex items-center fixed top-0 left-0 right-0">
+    <body class="flex flex-col min-h-screen w-full">
+      <nav class="bg-[#062D2D] relative text-white h-[80px] w-full px-10 flex items-center top-0 left-0 right-0">
         <a href="/home" class="mr-auto">
         <img src="LAPANGBOLA LOGO FINAL_Logo Utama Putih.png" alt="Lapangbola Logo" class="h-[60px]" />
         </a>
@@ -38,11 +38,56 @@
             </ul>
       </nav>
 
-      <main class="flex-grow pt-[80px]">
+      <main class="flex-grow">
         <%= yield %>
       </main>
 
-      <footer class="w-full bg-[#062D2D] text-white pt-10 px-8 mt-auto">
+      <footer class="w-full bg-[#062D2D] text-white pt-10 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+          <h2 class="text-4xl font-bold mb-6"> Articles</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Article Card -->
+            <div class="flex border-solid border border-white rounded-3xl shadow-md overflow-hidden">
+              <img src="article_image_1.jpg" alt="Article Image" class="w-full h-auto">
+              <div class="p-4 flex flex-col justify-between">
+                <div class="flex flex-col">
+                  <p class="text-white text-sm">
+                    A brief description of the article goes here. It should be concise and engaging to attract readers.
+                  </p>
+                  <a href="/articles/1" class="text-[#062D2D] font-bold hover:underline">Read More</a>
+                </div>
+                <p class="text-gray-400 text-xs mt-2">Published on: <span class="text-gray-400">2023-10-01</span></p>
+              </div>
+            </div>
+
+            <div class="flex border-solid border border-white rounded-3xl shadow-md overflow-hidden">
+              <img src="article_image_1.jpg" alt="Article Image" class="w-full h-auto">
+              <div class="p-4 flex flex-col justify-between">
+                <div class="flex flex-col">
+                  <p class="text-white text-sm">
+                    Another brief description for a different article. Keep it short and engaging.
+                  </p>
+                  <a href="/articles/1" class="text-[#062D2D] font-bold hover:underline">Read More</a>
+                </div>
+                <p class="text-gray-400 text-xs mt-2">Published on: <span class="text-gray-400">2023-10-01</span></p>
+              </div>
+            </div>
+
+            <div class="flex border-solid border border-white rounded-3xl shadow-md overflow-hidden">
+              <img src="article_image_1.jpg" alt="Article Image" class="w-full h-auto">
+              <div class="p-4 flex flex-col justify-between">
+                <div class="flex flex-col">
+                  <p class="text-white text-sm">
+                    Another brief description for a different article. Keep it short and engaging.
+                  </p>
+                  <a href="/articles/1" class="text-[#062D2D] font-bold hover:underline">Read More</a>
+                </div>
+                <p class="text-gray-400 text-xs mt-2">Published on: <span class="text-gray-400">2023-10-01</span></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
         <div class="max-w-6xl mx-auto flex flex-wrap justify-between">
           <div>
             <h2 class="text-xl font-bold">Featured Competitions</h2>
@@ -55,7 +100,7 @@
               <li>Bandung Premier League U-16</li>
             </ul>
           </div>
-          <div>
+          <div class="flex flex-col text-end">
             <h2 class="text-xl font-bold">Pages</h2>
             <ul class="text-gray-400 mt-2 text-sm space-y-1">
               <li><a href="/about">About</a></li>
@@ -72,9 +117,9 @@
           <!-- Diagonal putih -->
           <div class="absolute right-[260px] top-0 h-full w-6 bg-white transform skew-x-12 z-0"></div>
 
-          <div class="flex items-center justify-between px-8 h-12 bg-[#062D2D] relative z-10">
+          <div class="flex items-center justify-between h-12 bg-[#062D2D] relative z-10">
             <!-- Ikon sosial media -->
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 pl-40">
               <a href="#"><img src="twitter.png" alt="Twitter" class="h-4 w-4"></a>
               <a href="#"><img src="facebook.png" alt="Facebook" class="h-4 w-4"></a>
               <a href="#"><img src="linkedin.png" alt="LinkedIn" class="h-4 w-4"></a>
