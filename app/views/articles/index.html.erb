@@ -8,56 +8,125 @@
   </head>
   <body class="bg-gray-100">
     <div class="container mx-auto px-4">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-      <% @live_scores.each do |score| %>
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div class="bg-gray-200 px-4 py-2">
-            <h2 class="text-lg font-bold text-gray-700">INFO SKOR</h2>
-          </div>
-          <div class="p-4 grid grid-cols-3 text-center">
-            <div class="text-sm font-semibold"><%= score.team_home %></div>
-            <div class="text-xl font-bold"><%= score.score_home %> - <%= score.score_away %></div>
-            <div class="text-sm font-semibold"><%= score.team_away %></div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-
       <h1 class="text-2xl font-bold my-4">BERITA UTAMA HARI INI</h1>
 
-      <% if @articles.any? %>
-        <div class="bg-white shadow-lg rounded-lg p-4 mb-6">
-          <h2 class="text-xl font-semibold"><%= @articles.first.title %></h2>
-          <img src="<%= @articles.first.image %>" alt="<%= @articles.first.title %>" class="w-full h-48 object-cover rounded-lg my-2">
-          <p class="text-gray-600"><%= truncate(@articles.first.content, length: 150) %></p>
-          <a href="<%= article_path(@articles.first) %>" class="text-blue-500 hover:underline mt-2 block">Baca Selengkapnya</a>
+      <div class="flex flex-col overflow-hidden">
+        <div class="flex relative rounded-3xl overflow-hidden">
+          <img src="unsplash_mY2ZHBU6GRk.png" alt="Article Image" class="w-full h-auto">
+          <div class="absolute p-4 flex flex-col w-full h-full items-start justify-end">
+              <p class="text-white font-[1000] text-4xl w-5/6 text-extrabold font-(family-name:poppins) p-5">
+                Another brief description for a different article. Keep it short and engaging.
+              </p>
+          </div>
         </div>
-      <% end %>
 
-      <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-4 mt-8">
-        <div class="text-xl font-bold mb-4 flex justify-between items-center">
+        <div class="flex text-gray-500 text-sm px-10 py-2 justify-between">
+          <div class="flex">
+            <p>20 Dec 2021</p>
+            <p class="mx-2">|</p>
+            <p>Eep Saepoloh</p>
+          </div>
+
+          <div class="flex gap-6">
+            <p>17,4K</p>
+            <p>11.6K</p>
+            <p>6,2K</p>
+          </div>
+        </div>
+
+        <div class="text-black flex justify-between px-10 py-2">
+          <div class="flex">
+            <p class="">
+              Dua tim yang berada di zona degradasi, Barito Putera dan Persipura mampu meraih tiga poin dalam laga penutup seri ketiga.
+            <a href="/articles/1" class="text-[#062D2D] font-bold hover:underline">Baca Selengkapnya</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full mt-8">
+        <div class="text-xl font-bold p-4 flex justify-between items-center">
           BERITA HARIAN
           <span class="cursor-pointer">▼</span>
         </div>
 
-        <% @articles.each do |article| %>
-          <div class="border-b pb-4 mb-4 flex gap-4">
-            <img src="<%= article.image %>" alt="Gambar" class="w-24 h-24 rounded-lg object-cover">
-            <div>
-              <p class="text-sm text-gray-500"><%= article.published_at.strftime("%d %b %Y") %></p>
-              <h3 class="font-bold"><%= article.title %></h3>
-              <p class="text-gray-600 text-sm"><%= truncate(article.content, length: 100) %></p>
-              <a href="<%= article_path(article) %>" class="text-blue-500 font-semibold">Baca Selengkapnya</a>
+        <div class="grid w-full">
+          <div class="flex h-40">
+            <img src="unsplash_mY2ZHBU6GRk.png" alt="Article Image" class="w-auto h-auto p-4 rounded-3xl">
+            <div class="flex flex-col justify-between py-4">
+              <div class="flex flex-col h-full">
+                <p class="text-sm text-gray-500">12 Dec 2020</p>
+                <h3 class="font-bold">Review BRI Liga 1 2021 Pekan ke-16: Pemain Asing, Kunci Kemenangan Dua Raksasa Jawa Timur</h3>
+                <p class="text-gray-600 text-sm line-clamp-2">Delapan tim mencatatkan nirbobol.</p>
+              </div>
+              <div class="flex items-end">
+                <a href="/articles/1" class="text-sm font-semibold">Baca Selengkapnya</a>
+              </div>
             </div>
           </div>
-        <% end %>
 
+          <div class="flex h-40">
+            <img src="unsplash_mY2ZHBU6GRk.png" alt="Article Image" class="w-auto h-auto p-4 rounded-3xl">
+            <div class="flex flex-col justify-between py-4">
+              <div class="flex flex-col h-full">
+                <p class="text-sm text-gray-500">12 Dec 2020</p>
+                <h3 class="font-bold">Review BRI Liga 1 2021 Pekan ke-16: Pemain Asing, Kunci Kemenangan Dua Raksasa Jawa Timur</h3>
+                <p class="text-gray-600 text-sm line-clamp-2">Delapan tim mencatatkan nirbobol.</p>
+              </div>
+              <div class="flex items-end">
+                <a href="/articles/1" class="text-sm font-semibold">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex h-40">
+            <img src="unsplash_mY2ZHBU6GRk.png" alt="Article Image" class="w-auto h-auto p-4 rounded-3xl">
+            <div class="flex flex-col justify-between py-4">
+              <div class="flex flex-col h-full">
+                <p class="text-sm text-gray-500">12 Dec 2020</p>
+                <h3 class="font-bold">Review BRI Liga 1 2021 Pekan ke-16: Pemain Asing, Kunci Kemenangan Dua Raksasa Jawa Timur</h3>
+                <p class="text-gray-600 text-sm line-clamp-2">Delapan tim mencatatkan nirbobol.</p>
+              </div>
+              <div class="flex items-end">
+                <a href="/articles/1" class="text-sm font-semibold">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex h-40">
+            <img src="unsplash_mY2ZHBU6GRk.png" alt="Article Image" class="w-auto h-auto p-4 rounded-3xl">
+            <div class="flex flex-col justify-between py-4">
+              <div class="flex flex-col h-full">
+                <p class="text-sm text-gray-500">12 Dec 2020</p>
+                <h3 class="font-bold">Review BRI Liga 1 2021 Pekan ke-16: Pemain Asing, Kunci Kemenangan Dua Raksasa Jawa Timur</h3>
+                <p class="text-gray-600 text-sm line-clamp-2">Delapan tim mencatatkan nirbobol.</p>
+              </div>
+              <div class="flex items-end">
+                <a href="/articles/1" class="text-sm font-semibold">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex h-40">
+            <img src="unsplash_mY2ZHBU6GRk.png" alt="Article Image" class="w-auto h-auto p-4 rounded-3xl">
+            <div class="flex flex-col justify-between py-4">
+              <div class="flex flex-col h-full">
+                <p class="text-sm text-gray-500">12 Dec 2020</p>
+                <h3 class="font-bold">Review BRI Liga 1 2021 Pekan ke-16</h3>
+                <p class="text-gray-600 text-sm line-clamp-2">Delapan tim mencatatkan nirbobol. Delapan tim mencatatkan nirbobol. Delapan tim mencatatkan nirbobol. Delapan tim mencatatkan nirbobol. Delapan tim mencatatkan nirbobol.</p>
+              </div>
+              <div class="flex items-end">
+                <a href="/articles/1" class="text-sm font-semibold">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="text-center">
-          <button class="text-blue-500 font-semibold">Muat lebih banyak</button>
+          <button class="text-sm font-semibold">Muat lebih banyak</button>
         </div>
       </div>
     </div>
-    <section class="bg-[#0C0F1F] text-white py-16 px-4 text-center">
+
+    <section class="bg-[#062D2D] text-white pt-16 text-center w-full">
       <h2 class="text-3xl md:text-4xl font-extrabold mb-4 uppercase">
         Stay Right Up To Date
       </h2>
@@ -72,9 +141,9 @@
         </div>
       <% end %>
 
-    <p class="text-xs text-gray-400 mt-4">
-      Only great content, we don’t share your email with third parties.
-    </p>
-  </section>
+      <p class="text-xs text-gray-400 mt-4">
+        Only great content, we don’t share your email with third parties.
+      </p>
+    </section>
   </body>
 </html>
